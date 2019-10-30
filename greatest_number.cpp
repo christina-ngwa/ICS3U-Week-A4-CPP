@@ -2,14 +2,14 @@
 //
 // Created by: Christina Ngwa
 // Created on: October 2019
-// This function shows the greatest number
+// This program shows the greatest number
 //   with user input
 
 #include <iostream>
 #include <string>
 
 int main() {
-    // This function shows the greastest number
+    // This function shows the greatest number
 
     std::string firstNumAsString;
     std::string secondNumAsString;
@@ -32,25 +32,28 @@ int main() {
             greatestNum = firstNum;
         } else {
             {}
+        }
         std::cout << "Enter the second number: ";
         std::cin >> secondNumAsString;
-        } try {
+        try {
             secondNum = std::stoi(secondNumAsString);
             if (secondNum > greatestNum) {
                 greatestNum = secondNum;
             } else {
                 {}
+            }
             std::cout << "Enter the third number: ";
             std::cin >> thirdNumAsString;
-            } try {
+            try {
                 thirdNum = std::stoi(thirdNumAsString);
                 if (thirdNum > greatestNum) {
                     greatestNum = thirdNum;
                 } else {
                     {}
                 }
-                std::cout << "The greatest number is " << greatestNum <<
-                ".";
+                std::cout << "" << std::endl;
+                std::cout << "The greatest number is "<< greatestNum
+                          << "." << std::endl;
             } catch (std::invalid_argument) {
                 std::cout << "Wrong input. Try again." << std::endl;
             }
